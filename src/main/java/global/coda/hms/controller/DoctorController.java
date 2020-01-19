@@ -1,7 +1,6 @@
 package global.coda.hms.controller;
 
 import global.coda.hms.model.DoctorRecord;
-import global.coda.hms.model.PatientRecord;
 import global.coda.hms.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -83,6 +82,11 @@ public class DoctorController {
     @GetMapping("/patients")
     public List<DoctorRecord> doctorsPatients() {
         return doctorService.getDoctorPatients();
+    }
+
+    @PostMapping("/patientEntry/{doctorID}/{patientID}")
+    public int patientDoctorMap(@PathVariable("patientID") int patientID, @PathVariable("doctorID") int doctorID) {
+        return doctorService.patientDoctorMap(patientID, doctorID);
     }
 
 

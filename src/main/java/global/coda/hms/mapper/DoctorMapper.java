@@ -3,10 +3,8 @@ package global.coda.hms.mapper;
 import global.coda.hms.model.DoctorRecord;
 import global.coda.hms.model.PatientRecord;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * The interface Doctor mapper.
@@ -79,6 +77,15 @@ public interface DoctorMapper {
      */
     @Select("select pk_user_id as id, user_name as name, patient_disease as disease, user_location as location, user_phone as phone from t_user RIGHT JOIN t_patient on t_patient.fk_user_id = t_user.pk_user_id where pk_user_id in (select fk_user_id from t_patient where pk_patient_id in (select fk_patient_id from t_patient_doctor_map where fk_doctor_id in (select pk_doctor_id from t_doctor where fk_user_id = (select pk_user_id from t_user where pk_user_id = #{id} and is_active='1'))))")
     List<PatientRecord> getAllPatients(int id);
+
+    @Select("select pk_patient_id from t_patient WHERE fk_user_id = #{id}")
+    int getPatientId(int id);
+
+    @Select("select pk_doctor_id from t_doctor WHERE fk_user_id = #{id}")
+    int getPDoctorId(int id);
+
+    @Insert("insert into t_patient_doctor_map (fk_patient_id , fk_doctor_id) VALUES (#{patientID} , #{doctorID})")
+    int patientDoctorMap(int patientID,int doctorID);
 
 
 }

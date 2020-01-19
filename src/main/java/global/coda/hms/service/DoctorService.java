@@ -1,9 +1,9 @@
 package global.coda.hms.service;
 
 import global.coda.hms.mapper.DoctorMapper;
-import global.coda.hms.mapper.PatientMapper;
 import global.coda.hms.model.DoctorRecord;
-import global.coda.hms.model.PatientRecord;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,6 +19,8 @@ public class DoctorService {
      */
     @Autowired
     DoctorMapper doctorMapper;
+
+    private static final Logger LOGGER = LogManager.getLogger(DoctorService.class);
 
 
     /**
@@ -37,6 +39,7 @@ public class DoctorService {
      * @return the int
      */
     public int createDoctor(DoctorRecord doctorRecord) {
+        LOGGER.info(doctorRecord);
         doctorMapper.createUser(doctorRecord);
         doctorMapper.createDoctor(doctorRecord);
         return doctorRecord.getId();
@@ -49,6 +52,7 @@ public class DoctorService {
      * @return the doctor
      */
     public DoctorRecord getDoctor(int id) {
+        LOGGER.info(String.valueOf(id));
         return doctorMapper.getDoctor(id);
     }
 
@@ -68,6 +72,7 @@ public class DoctorService {
      * @return the int
      */
     public int updateDoctor(DoctorRecord doctorRecord) {
+        LOGGER.info(doctorRecord);
         doctorMapper.updateUser(doctorRecord);
         doctorMapper.updateDoctor(doctorRecord);
         return doctorRecord.getId();
@@ -81,9 +86,18 @@ public class DoctorService {
     public List<DoctorRecord> getDoctorPatients() {
         List<DoctorRecord> doctorRecords = doctorMapper.getDoctors();
         for (DoctorRecord doctorRecord : doctorRecords) {
+            LOGGER.info(doctorRecord.toString());
             doctorRecord.setPatientList(doctorMapper.getAllPatients(doctorRecord.getId()));
         }
         return doctorRecords;
+    }
+
+    public int patientDoctorMap(int patientID, int doctorID) {
+        LOGGER.info(patientID + " " + doctorID);
+        patientID = doctorMapper.getPatientId(patientID);
+        doctorID = doctorMapper.getPDoctorId(doctorID);
+        return doctorMapper.patientDoctorMap(patientID, doctorID);
+
     }
 
 
