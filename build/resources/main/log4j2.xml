@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN" monitorInterval="30">
 	<Properties>
-		<Property name="LOG_PATTERN">%d{yyyy-MM-dd'T'HH:mm:ss.SSSZ} %p %m%n</Property>
-		<Property name="APP_LOG_ROOT">c:/temp</Property>
+		<Property name="PID">????</Property>
+		<Property name="LOG_PATTERN">%clr{%d{yyyy-MM-dd
+			HH:mm:ss.SSS}}{faint} %clr{%5p} %clr{${sys:PID}}{magenta} %clr{---}{faint} %clr{[%15.15t]}{faint} %clr{%-40.40c{1.}}{cyan} %clr{:}{faint} %m%n%xwEx
+		</Property>
 	</Properties>
 	<Appenders>
-		<Console name="console" target="SYSTEM_OUT">
-			<PatternLayout pattern="${LOG_PATTERN}" />
+		<Console name="Console" target="SYSTEM_OUT" follow="true">
+			<PatternLayout pattern="${LOG_PATTERN}"/>
 		</Console>
-
-		<RollingFile name="file"
-					 fileName="${APP_LOG_ROOT}/SpringBoot2App/application.log"
-					 filePattern="${APP_LOG_ROOT}/SpringBoot2App/application-%d{yyyy-MM-dd}-%i.log">
-			<PatternLayout pattern="${LOG_PATTERN}" />
-			<Policies>
-				<SizeBasedTriggeringPolicy size="19500KB" />
-			</Policies>
-			<DefaultRolloverStrategy max="1" />
-		</RollingFile>
-
 	</Appenders>
 	<Loggers>
+		<Logger name="global.coda.hms" level="TRACE" additivity="false">
+			<AppenderRef ref="Console"/>
+		</Logger>
 		<Root level="info">
-			<AppenderRef ref="console" />
-			<AppenderRef ref="file" />
+			<AppenderRef ref="Console"/>
 		</Root>
 	</Loggers>
 </Configuration>

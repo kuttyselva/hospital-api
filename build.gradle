@@ -33,11 +33,22 @@ dependencies {
     testImplementation('org.springframework.boot:spring-boot-starter-test') {
         exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
     }
-
+    compile 'org.springframework.boot:spring-boot-starter-log4j2'
     implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.1'
     runtimeOnly 'mysql:mysql-connector-java'
 }
-
+configurations {
+    developmentOnly
+    runtimeClasspath {
+        extendsFrom developmentOnly
+    }
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+    all {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+    }
+}
 test {
     useJUnitPlatform()
 }

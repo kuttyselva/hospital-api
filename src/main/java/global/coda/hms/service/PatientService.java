@@ -3,7 +3,8 @@ package global.coda.hms.service;
 import global.coda.hms.mapper.PatientMapper;
 import global.coda.hms.model.DoctorRecord;
 import global.coda.hms.model.PatientRecord;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,6 +21,8 @@ public class PatientService {
     @Autowired
     PatientMapper patientMapper;
 
+    private static final Logger LOGGER = LogManager.getLogger(DoctorService.class);
+
 
     /**
      * Gets patient.
@@ -27,7 +30,10 @@ public class PatientService {
      * @return the patient
      */
     public List<PatientRecord> getPatients() {
-        return patientMapper.getPatients();
+        LOGGER.traceEntry();
+        List<PatientRecord> patientRecordList = patientMapper.getPatients();
+        LOGGER.traceExit(patientRecordList);
+        return patientRecordList;
     }
 
     /**
@@ -37,9 +43,12 @@ public class PatientService {
      * @return the int
      */
     public int createPatient(PatientRecord patientRecord) {
+        LOGGER.trace(patientRecord);
         patientMapper.createUser(patientRecord);
         patientMapper.createPatient(patientRecord);
-        return patientRecord.getId();
+        int id = patientRecord.getId();
+        LOGGER.traceExit(id);
+        return id;
     }
 
     /**
@@ -49,7 +58,10 @@ public class PatientService {
      * @return the patient
      */
     public PatientRecord getPatient(int id) {
-        return patientMapper.getPatient(id);
+        LOGGER.trace(id);
+        PatientRecord patientRecord = patientMapper.getPatient(id);
+        LOGGER.traceExit(patientRecord);
+        return patientRecord;
     }
 
     /**
@@ -59,9 +71,12 @@ public class PatientService {
      * @return the int
      */
     public int updatePatient(PatientRecord patientRecord) {
+        LOGGER.trace(patientRecord);
         patientMapper.updateUser(patientRecord);
         patientMapper.updatePatient(patientRecord);
-        return patientRecord.getId();
+        int id = patientRecord.getId();
+        LOGGER.traceExit(id);
+        return id;
     }
 
 
@@ -69,9 +84,13 @@ public class PatientService {
      * Delete patient.
      *
      * @param id the id
+     * @return the int
      */
-    public void deletePatient(int id) {
+    public int deletePatient(int id) {
+        LOGGER.traceEntry();
         patientMapper.deletePatient(id);
+        LOGGER.traceExit(id);
+        return id;
     }
 
     /**
@@ -81,6 +100,9 @@ public class PatientService {
      * @return the all doctors
      */
     public List<DoctorRecord> getAllDoctors(int patientId) {
-        return patientMapper.getAllDoctors(patientId);
+        LOGGER.trace(patientId);
+        List<DoctorRecord> doctorRecordList = patientMapper.getAllDoctors(patientId);
+        LOGGER.traceExit(doctorRecordList);
+        return doctorRecordList;
     }
 }

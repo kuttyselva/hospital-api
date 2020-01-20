@@ -1,8 +1,12 @@
 package global.coda.hms.controller;
 
+import global.coda.hms.constants.ResponseStatus;
+import global.coda.hms.model.CustomResponse;
 import global.coda.hms.model.DoctorRecord;
 import global.coda.hms.model.PatientRecord;
 import global.coda.hms.service.PatientService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -21,6 +25,8 @@ public class PatientController {
     @Autowired
     PatientService patientService;
 
+    private static final Logger LOGGER = LogManager.getLogger(PatientController.class);
+
 
     /**
      * Gets patient.
@@ -28,8 +34,16 @@ public class PatientController {
      * @return the patient
      */
     @GetMapping("/all")
-    public List<PatientRecord> getPatients() {
-        return patientService.getPatients();
+    public CustomResponse<List<PatientRecord>> getPatients() {
+        LOGGER.traceEntry();
+        CustomResponse<List<PatientRecord>> patientsResponse = new CustomResponse<>();
+        List<PatientRecord> patientRecords = patientService.getPatients();
+        patientsResponse.setStatus(ResponseStatus.OK);
+        patientsResponse.setSuccess(true);
+        patientsResponse.setObject(patientRecords);
+        LOGGER.traceExit(patientsResponse);
+        return patientsResponse;
+
     }
 
     /**
@@ -39,8 +53,15 @@ public class PatientController {
      * @return the int
      */
     @PostMapping("/create")
-    public int createPatient(@RequestBody PatientRecord patientRecord) {
-        return patientService.createPatient(patientRecord);
+    public CustomResponse<Integer> createPatient(@RequestBody PatientRecord patientRecord) {
+        LOGGER.trace(patientRecord);
+        CustomResponse<Integer> createResponse = new CustomResponse<>();
+        int id = patientService.createPatient(patientRecord);
+        createResponse.setStatus(ResponseStatus.OK);
+        createResponse.setSuccess(true);
+        createResponse.setObject(id);
+        LOGGER.traceExit(createResponse);
+        return createResponse;
     }
 
 
@@ -51,18 +72,32 @@ public class PatientController {
      * @return the patient
      */
     @GetMapping("/patient/{id}")
-    public PatientRecord getPatient(@PathVariable("id") int id) {
-        return patientService.getPatient(id);
+    public CustomResponse<PatientRecord> getPatient(@PathVariable("id") int id) {
+        LOGGER.trace(id);
+        CustomResponse<PatientRecord> patientRecordCustomResponse = new CustomResponse<>();
+        PatientRecord patientRecord = patientService.getPatient(id);
+        patientRecordCustomResponse.setObject(patientRecord);
+        patientRecordCustomResponse.setStatus(ResponseStatus.OK);
+        patientRecordCustomResponse.setSuccess(true);
+        LOGGER.traceExit(patientRecordCustomResponse);
+        return patientRecordCustomResponse;
     }
 
     /**
      * Delete patient.
      *
      * @param id the id
+     * @return the custom response
      */
     @GetMapping("/patient/delete/{id}")
-    public void deletePatient(@PathVariable("id") int id) {
-        patientService.deletePatient(id);
+    public CustomResponse<Integer> deletePatient(@PathVariable("id") int id) {
+        LOGGER.trace(id);
+        CustomResponse<Integer> customResponse = new CustomResponse<>();
+        customResponse.setSuccess(true);
+        customResponse.setStatus(ResponseStatus.SUCCESS_NO_CONTENT);
+        customResponse.setObject(patientService.deletePatient(id));
+        LOGGER.traceExit(customResponse);
+        return customResponse;
     }
 
     /**
@@ -72,8 +107,14 @@ public class PatientController {
      * @return the int
      */
     @PostMapping("/patient/update")
-    public int patientUpdate(@RequestBody PatientRecord patientRecord) {
-        return patientService.updatePatient(patientRecord);
+    public CustomResponse<Integer> patientUpdate(@RequestBody PatientRecord patientRecord) {
+        LOGGER.trace(patientRecord);
+        CustomResponse<Integer> updateResponse = new CustomResponse<>();
+        updateResponse.setStatus(ResponseStatus.OK);
+        updateResponse.setSuccess(true);
+        updateResponse.setObject(patientService.updatePatient(patientRecord));
+        LOGGER.traceExit(updateResponse);
+        return updateResponse;
     }
 
     /**
@@ -83,7 +124,13 @@ public class PatientController {
      * @return the all doctors
      */
     @GetMapping("/patient/{id}/getDoctors")
-    public List<DoctorRecord> getAllDoctors(@PathVariable("id") int patientId) {
-        return patientService.getAllDoctors(patientId);
+    public CustomResponse<List<DoctorRecord>> getAllDoctors(@PathVariable("id") int patientId) {
+        LOGGER.trace(patientId);
+        CustomResponse<List<DoctorRecord>> doctorsResponse = new CustomResponse<>();
+        doctorsResponse.setStatus(ResponseStatus.OK);
+        doctorsResponse.setSuccess(true);
+        doctorsResponse.setObject(patientService.getAllDoctors(patientId));
+        LOGGER.traceExit(doctorsResponse);
+        return doctorsResponse;
     }
 }
