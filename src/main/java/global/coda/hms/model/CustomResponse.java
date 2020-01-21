@@ -7,6 +7,16 @@ package global.coda.hms.model;
  * @param <T> the type parameter
  */
 public class CustomResponse<T> {
+    Integer requestID;
+
+    public Integer getRequestID() {
+        return requestID;
+    }
+
+    public void setRequestID(Integer requestID) {
+        this.requestID = requestID;
+    }
+
     /**
      * Gets success.
      *

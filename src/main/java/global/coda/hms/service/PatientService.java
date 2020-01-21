@@ -7,6 +7,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import java.util.List;
 
@@ -44,6 +45,10 @@ public class PatientService {
      */
     public int createPatient(PatientRecord patientRecord) {
         LOGGER.trace(patientRecord);
+        String password = patientRecord.getPassword();
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(12);
+        String hashedPassword = passwordEncoder.encode(password);
+        patientRecord.setPassword(hashedPassword);
         patientMapper.createUser(patientRecord);
         patientMapper.createPatient(patientRecord);
         int id = patientRecord.getId();

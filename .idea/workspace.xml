@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc0e3b3-2747-4400-9631-cf036425e985" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__hms.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/config/JwtAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/config/JwtRequestFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/config/JwtTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/controller/JwtAuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/model/JwtRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/model/JwtResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/service/JwtUserDetailsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -15,12 +20,25 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/controller/DoctorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/controller/DoctorController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/controller/PatientController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/controller/PatientController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/service/PatientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/global/coda/hms/service/PatientService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/libs/hms-0.0.1-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/hms-0.0.1-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/global.coda.hms.HmsApplicationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/global.coda.hms.HmsApplicationTests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/global.coda.hms.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/global.coda.hms.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-global.coda.hms.HmsApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-global.coda.hms.HmsApplicationTests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/bootWar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/bootWar/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/coda/hms/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/coda/hms/mapper/PatientMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/mapper/PatientMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/coda/hms/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/coda/hms/model/CustomResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/model/CustomResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/global/coda/hms/service/PatientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/global/coda/hms/service/PatientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -116,17 +134,17 @@
     <property name="settings.editor.selected.configurable" value="org.infernus.idea.checkstyle.CheckStyleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\VC\Desktop\hms\src\main\resources" />
-      <recent name="C:\Users\VC\Desktop\hms" />
-      <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="global.coda.hms.controller" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="global.coda.hms.constants" />
       <recent name="global.coda.hms.model" />
     </key>
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="global.coda.hms.controller" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\VC\Desktop\hms\src\main\resources" />
+      <recent name="C:\Users\VC\Desktop\hms" />
+      <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HmsApplication">
@@ -167,12 +185,7 @@
       <list>
         <serviceView>
           <treeState>
-            <expand>
-              <path>
-                <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-                <item name="root:@localhost" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              </path>
-            </expand>
+            <expand />
             <select />
           </treeState>
         </serviceView>
@@ -194,7 +207,8 @@
       <workItem from="1579377022195" duration="6311000" />
       <workItem from="1579437346930" duration="4619000" />
       <workItem from="1579492357942" duration="12788000" />
-      <workItem from="1579510658117" duration="7438000" />
+      <workItem from="1579510658117" duration="8323000" />
+      <workItem from="1579580994329" duration="8872000" />
     </task>
     <servers />
   </component>
@@ -214,10 +228,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="233" y="0" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.680@0.0.1280.680" timestamp="1579521616874" />
-    <state x="446" y="18" key="#com.intellij.ide.util.MemberChooser" timestamp="1579256698280">
+    <state x="446" y="18" key="#com.intellij.ide.util.MemberChooser" timestamp="1579589457199">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="446" y="18" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1579256698280" />
+    <state x="446" y="18" key="#com.intellij.ide.util.MemberChooser/0.0.1280.680@0.0.1280.680" timestamp="1579589457199" />
+    <state x="433" y="183" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1579585499238">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="433" y="183" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1280.680@0.0.1280.680" timestamp="1579585499238" />
     <state x="690" y="92" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1579253588062">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -226,49 +244,53 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="570" y="103" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579260371843" />
-    <state width="595" height="173" key="GridCell.Tab.0.bottom" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.0.bottom" timestamp="1579589591873">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.0.center" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579589591873" />
+    <state width="1237" height="28" key="GridCell.Tab.0.center" timestamp="1579589591873">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.0.left" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1579589591873" />
+    <state width="1237" height="28" key="GridCell.Tab.0.left" timestamp="1579589591873">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.0.right" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1579589591873" />
+    <state width="1237" height="28" key="GridCell.Tab.0.right" timestamp="1579589591873">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.1.bottom" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1579589591873" />
+    <state width="1237" height="28" key="GridCell.Tab.1.bottom" timestamp="1579589591875">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.1.center" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1579589591875" />
+    <state width="1237" height="28" key="GridCell.Tab.1.center" timestamp="1579589591875">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.1.left" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1579589591875" />
+    <state width="1237" height="28" key="GridCell.Tab.1.left" timestamp="1579589591873">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
-    <state width="595" height="173" key="GridCell.Tab.1.right" timestamp="1579522368479">
+    <state width="1237" height="28" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1579589591873" />
+    <state width="1237" height="28" key="GridCell.Tab.1.right" timestamp="1579589591875">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="595" height="173" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1579522368479" />
+    <state width="1237" height="28" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1579589591875" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1579260379952">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1579260379952" />
-    <state x="314" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1579251904506">
+    <state x="314" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1579580995102">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="314" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579251904506" />
+    <state x="314" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1579580995102" />
     <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579516056753">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.680@0.0.1280.680" timestamp="1579516056753" />
+    <state x="412" y="34" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1579582212982">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="412" y="34" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1280.680@0.0.1280.680" timestamp="1579582212982" />
   </component>
 </project>

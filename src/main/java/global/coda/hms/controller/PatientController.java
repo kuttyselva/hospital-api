@@ -10,6 +10,8 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -34,12 +36,13 @@ public class PatientController {
      * @return the patient
      */
     @GetMapping("/all")
-    public CustomResponse<List<PatientRecord>> getPatients() {
+    public CustomResponse<List<PatientRecord>> getPatients(HttpServletRequest httpServletRequest) {
         LOGGER.traceEntry();
         CustomResponse<List<PatientRecord>> patientsResponse = new CustomResponse<>();
         List<PatientRecord> patientRecords = patientService.getPatients();
         patientsResponse.setStatus(ResponseStatus.OK);
         patientsResponse.setSuccess(true);
+        patientsResponse.setRequestID((Integer) httpServletRequest.getAttribute("requestID"));
         patientsResponse.setObject(patientRecords);
         LOGGER.traceExit(patientsResponse);
         return patientsResponse;
