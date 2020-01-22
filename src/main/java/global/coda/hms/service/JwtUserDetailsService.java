@@ -15,11 +15,18 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+/**
+ * The type Jwt user details service.
+ */
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
+    /**
+     * The User mapper.
+     */
     @Autowired
     UserMapper userMapper;
     private static final Logger LOGGER = LogManager.getLogger(JwtUserDetailsService.class);
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         PatientRecord patientRecord = userMapper.getCredential(username);
