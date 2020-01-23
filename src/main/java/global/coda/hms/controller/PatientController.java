@@ -17,6 +17,7 @@ import java.util.List;
 /**
  * The type Patient controller.
  */
+@CrossOrigin
 @RestController
 @RequestMapping("/patients")
 public class PatientController {

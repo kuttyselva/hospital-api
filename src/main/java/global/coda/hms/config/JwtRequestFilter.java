@@ -30,7 +30,7 @@ public class JwtRequestFilter extends OncePerRequestFilter {
         final String requestTokenHeader = request.getHeader("Authorization");
         String username = null;
         String jwtToken = null;
-
+        System.out.println(requestTokenHeader);
 // JWT Token is in the form "Bearer token". Remove Bearer word and get
 // only the Token
         if (requestTokenHeader != null && requestTokenHeader.startsWith("Bearer ")) {
@@ -61,9 +61,9 @@ public class JwtRequestFilter extends OncePerRequestFilter {
                 SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
             }
         }
-        Random random=new Random();
+        Random random = new Random();
         int reqID = random.nextInt();
-        request.setAttribute("requestID",reqID);
+        request.setAttribute("requestID", reqID);
         chain.doFilter(request, response);
     }
 }
