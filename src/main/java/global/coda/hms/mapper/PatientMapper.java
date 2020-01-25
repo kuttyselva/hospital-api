@@ -28,9 +28,6 @@ public interface PatientMapper {
     @Options(useGeneratedKeys = true, keyProperty = "id", keyColumn = "pk_user_id")
     void createUser(PatientRecord patientRecord);
 
-    @Select("select user_name as name , user_password as password from t_user where user_name = #{username} is_active=1")
-    PatientRecord getCredential(String username);
-
     /**
      * Create patient.
      *

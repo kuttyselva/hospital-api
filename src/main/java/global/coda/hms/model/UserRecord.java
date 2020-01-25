@@ -8,6 +8,16 @@ public class UserRecord {
     private int age;
     private String name;
 
+    public int getRole() {
+        return role;
+    }
+
+    public void setRole(int role) {
+        this.role = role;
+    }
+
+    private int role;
+
 
     /**
      * Gets id.

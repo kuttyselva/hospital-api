@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import global.coda.hms.mapper.UserMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import io.jsonwebtoken.Claims;
@@ -20,6 +22,11 @@ import org.springframework.stereotype.Component;
 public class JwtTokenUtil implements Serializable {
 
     private static final long serialVersionUID = -2550185165626007488L;
+    /**
+     * The User mapper.
+     */
+    @Autowired
+    UserMapper userMapper;
     /**
      * The constant JWT_TOKEN_VALIDITY.
      */
@@ -82,6 +89,13 @@ public class JwtTokenUtil implements Serializable {
 //generate token for user
     public String generateToken(UserDetails userDetails) {
         Map<String, Object> claims = new HashMap<>();
+        if(userMapper.getUserID(userDetails.getUsername()).getRole()==1){
+            claims.put("user", userMapper.getPatientData(userDetails.getUsername()));
+        }
+        else{
+            claims.put("user", userMapper.getDoctorData(userDetails.getUsername()));
+
+        }
         return doGenerateToken(claims, userDetails.getUsername());
     }
 

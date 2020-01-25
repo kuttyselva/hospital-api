@@ -2,8 +2,6 @@ package global.coda.hms.service;
 
 import java.util.ArrayList;
 
-import global.coda.hms.controller.PatientController;
-import global.coda.hms.mapper.PatientMapper;
 import global.coda.hms.mapper.UserMapper;
 import global.coda.hms.model.PatientRecord;
 import org.apache.logging.log4j.LogManager;
