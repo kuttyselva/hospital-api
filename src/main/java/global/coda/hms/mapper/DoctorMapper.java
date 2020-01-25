@@ -120,11 +120,12 @@ public interface DoctorMapper {
      *
      * @return the all patient under all doctors
      */
-    @Select("<script> select pk_user_id,user_name,doctor_speciality,user_age,user_location,user_phone from t_user join t_doctor on t_user.pk_user_id = t_doctor.fk_user_id  where t_user.is_active=1 and t_doctor.is_active=1 <if test='id!=0'> and pk_user_id= #{id} </if> </script>")
+    @Select("<script> select pk_user_id,fk_role_id,user_name,doctor_speciality,user_age,user_location,user_phone from t_user join t_doctor on t_user.pk_user_id = t_doctor.fk_user_id  where t_user.is_active=1 and t_doctor.is_active=1 <if test='id!=0'> and pk_user_id= #{id} </if> </script>")
     @Results(value = {
             @Result(property = "id", column = "pk_user_id"),
             @Result(property = "name", column = "user_name"),
             @Result(property = "age", column = "user_age"),
+            @Result(property = "role" , column = "fk_role_id"),
             @Result(property = "location", column = "user_location"),
             @Result(property = "speciality", column = "doctor_speciality"),
             @Result(property = "phone", column = "user_phone"),

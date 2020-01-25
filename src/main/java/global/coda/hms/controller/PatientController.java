@@ -8,6 +8,8 @@ import global.coda.hms.service.PatientService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServlet;
@@ -57,7 +59,7 @@ public class PatientController {
      * @return the int
      */
     @PostMapping("/create")
-    public CustomResponse<Integer> createPatient(@RequestBody PatientRecord patientRecord) {
+    public ResponseEntity<CustomResponse<Integer>> createPatient(@RequestBody PatientRecord patientRecord) {
         LOGGER.trace(patientRecord);
         CustomResponse<Integer> createResponse = new CustomResponse<>();
         int id = patientService.createPatient(patientRecord);
@@ -65,7 +67,7 @@ public class PatientController {
         createResponse.setSuccess(true);
         createResponse.setObject(id);
         LOGGER.traceExit(createResponse);
-        return createResponse;
+        return new ResponseEntity<>(createResponse, HttpStatus.BAD_REQUEST);
     }
 
 
