@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="global.coda.hms.controller.PatientControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-02T18:39:44" hostname="DESKTOP-DN06960" time="0.538">
+  <properties/>
+  <testcase name="viewPatientRecordTest()" classname="global.coda.hms.controller.PatientControllerTest" time="0.538"/>
+  <system-out><![CDATA[2020-02-03
+			00:09:34.492  INFO ???? --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [global.coda.hms.controller.PatientControllerTest], using SpringBootContextLoader
+2020-02-03
+			00:09:34.548  INFO ???? --- [    Test worker] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [global.coda.hms.controller.PatientControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-03
+			00:09:34.551  INFO ???? --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [global.coda.hms.controller.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-03
+			00:09:34.701  INFO ???? --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration global.coda.hms.HmsApplication for test class global.coda.hms.controller.PatientControllerTest
+2020-02-03
+			00:09:34.798  INFO ???? --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-03
+			00:09:34.806  INFO ???? --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@451778c2, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@203806e7, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@48820a64, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@37415065, org.springframework.test.context.support.DirtiesContextTestExecutionListener@496eef27, org.springframework.test.context.transaction.TransactionalTestExecutionListener@2981c7d3, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@718839ad, org.springframework.test.context.event.EventPublishingTestExecutionListener@4c779d81, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@72de44ff, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@5546aa28, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@65b3b47c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1558a6de, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@1521f136]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::  (v2.2.3.BUILD-SNAPSHOT)
+
+2020-02-03
+			00:09:35.233  INFO 15900 --- [    Test worker] g.c.h.c.PatientControllerTest            : Starting PatientControllerTest on DESKTOP-DN06960 with PID 15900 (started by VC in C:\Users\VC\Desktop\hms)
+2020-02-03
+			00:09:35.233 DEBUG 15900 --- [    Test worker] g.c.h.c.PatientControllerTest            : Running with Spring Boot v2.2.3.BUILD-SNAPSHOT, Spring v5.2.3.RELEASE
+2020-02-03
+			00:09:35.248  INFO 15900 --- [    Test worker] g.c.h.c.PatientControllerTest            : No active profile set, falling back to default profiles: default
+2020-02-03
+			00:09:36.811  INFO 15900 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-02-03
+			00:09:36.987  INFO 15900 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 154ms. Found 1 JPA repository interfaces.
+2020-02-03
+			00:09:37.723  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:37.782  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:37.798  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:37.798  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@7f9b3717' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:37.813  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:37.845  INFO 15900 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-02-03
+			00:09:38.173  INFO 15900 --- [    Test worker] o.f.c.i.l.VersionPrinter                 : Flyway Community Edition 6.0.8 by Redgate
+2020-02-03
+			00:09:38.766  INFO 15900 --- [    Test worker] o.f.c.i.d.DatabaseFactory                : Database: jdbc:mysql://localhost:3306/ (MySQL 8.0)
+2020-02-03
+			00:09:38.835  INFO 15900 --- [    Test worker] o.f.c.i.c.DbValidate                     : Successfully validated 1 migration (execution time 00:00.038s)
+2020-02-03
+			00:09:38.851  INFO 15900 --- [    Test worker] o.f.c.i.c.DbMigrate                      : Current version of schema `mydb`: 1
+2020-02-03
+			00:09:38.851  INFO 15900 --- [    Test worker] o.f.c.i.c.DbMigrate                      : Schema `mydb` is up to date. No migration necessary.
+2020-02-03
+			00:09:39.101  INFO 15900 --- [    Test worker] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-02-03
+			00:09:39.242  INFO 15900 --- [    Test worker] o.h.Version                              : HHH000412: Hibernate Core {5.4.10.Final}
+2020-02-03
+			00:09:39.466  INFO 15900 --- [    Test worker] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-02-03
+			00:09:39.649  INFO 15900 --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2020-02-03
+			00:09:39.649  WARN 15900 --- [    Test worker] c.z.h.u.DriverDataSource                 : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+2020-02-03
+			00:09:39.695  INFO 15900 --- [    Test worker] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2020-02-03
+			00:09:39.723  INFO 15900 --- [    Test worker] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2020-02-03
+			00:09:40.805  INFO 15900 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-02-03
+			00:09:40.814  INFO 15900 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-02-03
+			00:09:41.180  WARN 15900 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-02-03
+			00:09:42.011  INFO 15900 --- [    Test worker] o.s.s.w.DefaultSecurityFilterChain       : Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2a7c5f61, org.springframework.security.web.context.SecurityContextPersistenceFilter@2cabf1cd, org.springframework.security.web.header.HeaderWriterFilter@45f96c9, org.springframework.security.web.authentication.logout.LogoutFilter@1d5ab6d3, global.coda.hms.config.JwtRequestFilter@34c5db49, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@8c97abf, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e333906, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2d61fd16, org.springframework.security.web.session.SessionManagementFilter@75e06644, org.springframework.security.web.access.ExceptionTranslationFilter@28525791, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@192f7e82]
+2020-02-03
+			00:09:43.030  INFO 15900 --- [    Test worker] o.s.s.c.ThreadPoolTaskExecutor           : Initializing ExecutorService 'applicationTaskExecutor'
+2020-02-03
+			00:09:44.043  INFO 15900 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2020-02-03
+			00:09:44.043  INFO 15900 --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Initializing Servlet ''
+2020-02-03
+			00:09:44.058  INFO 15900 --- [    Test worker] o.s.t.w.s.TestDispatcherServlet          : Completed initialization in 15 ms
+2020-02-03
+			00:09:44.105  INFO 15900 --- [    Test worker] g.c.h.c.PatientControllerTest            : Started PatientControllerTest in 9.235 seconds (JVM running for 11.575)
+null
+2020-02-03
+			00:09:44.392  WARN 15900 --- [    Test worker] g.c.h.c.JwtRequestFilter                 : JWT Token does not begin with Bearer String
+2020-02-03
+			00:09:44.423 TRACE 15900 --- [    Test worker] g.c.h.c.PatientController                : Enter
+2020-02-03
+			00:09:44.423 TRACE 15900 --- [    Test worker] g.c.h.s.DoctorService                    : Enter
+2020-02-03
+			00:09:44.454 DEBUG 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : ==>  Preparing: select t_user.pk_user_id as id, t_user.user_name as name , t_user.user_location as location, t_user.user_phone as phone, t_user.user_age as age ,t_patient.patient_disease as disease from t_user join t_patient on t_user.pk_user_id=t_patient.fk_user_id WHERE t_user.is_active = 1 
+2020-02-03
+			00:09:44.485 DEBUG 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : ==> Parameters: 
+2020-02-03
+			00:09:44.501 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==    Columns: id, name, location, phone, age, disease
+2020-02-03
+			00:09:44.501 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 3, selva, hole, 987654312, 20, cheese
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 5, dolphin, sea, 987654312, 20, fever
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 7, jellyfish, indian ocean, 987654312, 20, dental
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 10, java, doloaewr, 2345678998, 23, fever
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 11, popoye, Disney, 987654312, 20, vegan
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 19, lenovo, beach, 9876543123, 30, feverish
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 21, lepe, beach, 9876543123, 30, ENT
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 22, ADSSAD, adsf, 111, 111, dsfa
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 36, papa, madurai, 9876543210, 20, fever
+2020-02-03
+			00:09:44.517 TRACE 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 37, vanmathi, kilpuk, 8229922992, 21, psycho
+2020-02-03
+			00:09:44.517 DEBUG 15900 --- [    Test worker] g.c.h.m.P.getPatients                    : <==      Total: 10
+2020-02-03
+			00:09:44.532 TRACE 15900 --- [    Test worker] g.c.h.s.DoctorService                    : Exit with([global.coda.hms.model.PatientRecord@42dd3de8, global.coda.hms.model.PatientRecord@23672c5, global.coda.hms.model.PatientRecord@f973c4c, global.coda.hms.model.PatientRecord@7e3cc0fb, global.coda.hms.model.PatientRecord@552580a9, global.coda.hms.model.PatientRecord@64b47092, global.coda.hms.model.PatientRecord@52f75514, global.coda.hms.model.PatientRecord@4a547ca9, global.coda.hms.model.PatientRecord@330d8d82, global.coda.hms.model.PatientRecord@74fa4b91])
+2020-02-03
+			00:09:44.532 TRACE 15900 --- [    Test worker] g.c.h.c.PatientController                : Exit with(global.coda.hms.model.CustomResponse@1c4defef)
+]]></system-out>
+  <system-err><![CDATA[Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+]]></system-err>
+</testsuite>

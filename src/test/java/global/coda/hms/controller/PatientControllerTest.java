@@ -33,37 +33,37 @@ public class PatientControllerTest {
                 get("/patients/all"))
                 .andExpect(status().isOk());
     }
-    @Test
-    public void deletePatientRecordTest() throws Exception {
-        this.mockMvc.perform(
-                put("/patients/delete/15"))
-                .andExpect(status().isOk());
-    }
-    @Test
-    public void createPatientRecordTest() throws Exception {
-        PatientRecord patient=new PatientRecord();
-        patient.setName("selva");
-        patient.setPassword("1234");
-
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
-        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
-        String requestJson=ow.writeValueAsString(patient );
-        mockMvc.perform(post("/patients/create").contentType(APPLICATION_JSON_UTF8)
-                .content(requestJson))
-                .andExpect(status().isOk());
-    }
-    @Test
-    public void updatePatientRecordTest() throws Exception {
-        PatientRecord patient=new PatientRecord();
-        patient.setName("selva");
-        patient.setPassword("123");
-        ObjectMapper mapper = new ObjectMapper();
-        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
-        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
-        String requestJson=ow.writeValueAsString(patient );
-        mockMvc.perform(put("/patients/update").contentType(APPLICATION_JSON_UTF8)
-                .content(requestJson))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void deletePatientRecordTest() throws Exception {
+//        this.mockMvc.perform(
+//                put("/patients/delete/15"))
+//                .andExpect(status().isOk());
+//    }
+//    @Test
+//    public void createPatientRecordTest() throws Exception {
+//        PatientRecord patient=new PatientRecord();
+//        patient.setName("selva");
+//        patient.setPassword("1234");
+//
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+//        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+//        String requestJson=ow.writeValueAsString(patient );
+//        mockMvc.perform(post("/patients/create").contentType(APPLICATION_JSON_UTF8)
+//                .content(requestJson))
+//                .andExpect(status().isOk());
+//    }
+//    @Test
+//    public void updatePatientRecordTest() throws Exception {
+//        PatientRecord patient=new PatientRecord();
+//        patient.setName("selva");
+//        patient.setPassword("123");
+//        ObjectMapper mapper = new ObjectMapper();
+//        mapper.configure(SerializationFeature.WRAP_ROOT_VALUE, false);
+//        ObjectWriter ow = mapper.writer().withDefaultPrettyPrinter();
+//        String requestJson=ow.writeValueAsString(patient );
+//        mockMvc.perform(put("/patients/update").contentType(APPLICATION_JSON_UTF8)
+//                .content(requestJson))
+//                .andExpect(status().isOk());
+//    }
 }
