@@ -117,7 +117,7 @@ public class DoctorController {
 
 
     /**
-     * Gets all doctors.
+     * Gets all doctors details.
      *
      * @param doctorID the doctor id
      * @return the all doctors
