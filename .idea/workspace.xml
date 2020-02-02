@@ -6,9 +6,17 @@
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/classAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.0.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/global.coda.hms.controller.PatientControllerTest.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/global.coda.hms.controller.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/global.coda.hms.controller.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-global.coda.hms.controller.PatientControllerTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +118,7 @@
       <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PatientControllerTest.viewPatientRecordTest">
+  <component name="RunManager" selected="Gradle.DoctorControllerTest.viewDoctorRecordTest">
     <configuration name="DoctorControllerTest.viewDoctorRecordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -219,10 +227,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.DoctorControllerTest.viewDoctorRecordTest" />
         <item itemvalue="Gradle.PatientControllerTest.viewPatientRecordTest" />
         <item itemvalue="Gradle.PatientControllerTest" />
         <item itemvalue="Gradle.HmsApplicationTests" />
-        <item itemvalue="Gradle.DoctorControllerTest.viewDoctorRecordTest" />
         <item itemvalue="Gradle.hms [build]" />
       </list>
     </recent_temporary>
@@ -273,7 +281,7 @@
       <workItem from="1580151959894" duration="2116000" />
       <workItem from="1580183594512" duration="5884000" />
       <workItem from="1580271025303" duration="2314000" />
-      <workItem from="1580658362103" duration="1613000" />
+      <workItem from="1580658362103" duration="1874000" />
     </task>
     <servers />
   </component>
@@ -309,22 +317,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="570" y="103" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579260371843" />
-    <state width="1237" height="19" key="GridCell.Tab.0.bottom" timestamp="1580668768277">
+    <state width="1237" height="-9" key="GridCell.Tab.0.bottom" timestamp="1580668947671">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="19" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580668768277" />
-    <state width="1237" height="19" key="GridCell.Tab.0.center" timestamp="1580668768277">
+    <state width="1237" height="-9" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
+    <state width="1237" height="-9" key="GridCell.Tab.0.center" timestamp="1580668947671">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="19" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580668768277" />
-    <state width="1237" height="19" key="GridCell.Tab.0.left" timestamp="1580668768277">
+    <state width="1237" height="-9" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
+    <state width="1237" height="-9" key="GridCell.Tab.0.left" timestamp="1580668947670">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="19" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580668768277" />
-    <state width="1237" height="19" key="GridCell.Tab.0.right" timestamp="1580668768277">
+    <state width="1237" height="-9" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580668947670" />
+    <state width="1237" height="-9" key="GridCell.Tab.0.right" timestamp="1580668947671">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="19" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580668768277" />
+    <state width="1237" height="-9" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
     <state width="1237" height="143" key="GridCell.Tab.1.bottom" timestamp="1580668617687">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
