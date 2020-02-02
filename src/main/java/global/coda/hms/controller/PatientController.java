@@ -67,6 +67,9 @@ public class PatientController {
         createResponse.setSuccess(true);
         createResponse.setObject(id);
         LOGGER.traceExit(createResponse);
+        if(id!=-1){
+            return new ResponseEntity<>(createResponse, HttpStatus.OK);
+        }
         return new ResponseEntity<>(createResponse, HttpStatus.BAD_REQUEST);
     }
 
@@ -130,13 +133,13 @@ public class PatientController {
      * @return the all doctors
      */
     @GetMapping("/patient/{id}/getDoctors")
-    public CustomResponse<List<DoctorRecord>> getAllDoctors(@PathVariable("id") int patientId) {
+    public ResponseEntity<CustomResponse<PatientRecord>> getAllDoctors(@PathVariable("id") int patientId) {
         LOGGER.trace(patientId);
-        CustomResponse<List<DoctorRecord>> doctorsResponse = new CustomResponse<>();
+        CustomResponse<PatientRecord> doctorsResponse = new CustomResponse<>();
         doctorsResponse.setStatus(ResponseStatus.OK);
         doctorsResponse.setSuccess(true);
         doctorsResponse.setObject(patientService.getAllDoctors(patientId));
         LOGGER.traceExit(doctorsResponse);
-        return doctorsResponse;
+        return new ResponseEntity<>(doctorsResponse,HttpStatus.OK);
     }
 }

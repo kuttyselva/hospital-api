@@ -1,5 +1,7 @@
 package global.coda.hms.model;
 
+import java.util.List;
+
 /**
  * The type Patient record.
  *
@@ -9,10 +11,18 @@ public class PatientRecord extends UserRecord {
     /**
      * constructor.
      */
+    private List<DoctorRecord> doctorRecordList;
     public PatientRecord() {
         // TODO Auto-generated constructor stub
     }
 
+    public List<DoctorRecord> getDoctorRecordList() {
+        return doctorRecordList;
+    }
+
+    public void setDoctorRecordList(List<DoctorRecord> doctorRecordList) {
+        this.doctorRecordList = doctorRecordList;
+    }
 
     /**
      * Gets disease.

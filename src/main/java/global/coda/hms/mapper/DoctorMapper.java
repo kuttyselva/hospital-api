@@ -111,7 +111,7 @@ public interface DoctorMapper {
      * @param id the id
      * @return the patient under doctor
      */
-    @Select("select user_name as name, patient_disease as disease, user_location as location, user_phone as phone from t_user RIGHT JOIN t_patient on t_patient.fk_user_id = t_user.pk_user_id where pk_user_id in (select fk_user_id from t_patient where pk_patient_id in (select fk_patient_id from t_patient_doctor_map where fk_doctor_id in (select pk_doctor_id from t_doctor where fk_user_id = (select pk_user_id from t_user where pk_user_id = #{id} and is_active='1'))))")
+    @Select("select pk_user_id as id, user_name as name, patient_disease as disease, user_location as location, user_phone as phone from t_user RIGHT JOIN t_patient on t_patient.fk_user_id = t_user.pk_user_id where pk_user_id in (select fk_user_id from t_patient where pk_patient_id in (select fk_patient_id from t_patient_doctor_map where fk_doctor_id in (select pk_doctor_id from t_doctor where fk_user_id = (select pk_user_id from t_user where pk_user_id = #{id} and is_active='1'))))")
     List<PatientRecord> getPatientUnderDoctor(int id);
 
 

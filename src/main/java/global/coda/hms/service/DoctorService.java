@@ -5,6 +5,7 @@ import global.coda.hms.model.DoctorRecord;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -43,6 +44,10 @@ public class DoctorService {
      */
     public int createDoctor(DoctorRecord doctorRecord) {
         LOGGER.trace(doctorRecord);
+        String password = doctorRecord.getPassword();
+        BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder(12);
+        String hashedPassword = passwordEncoder.encode(password);
+        doctorRecord.setPassword(hashedPassword);
         doctorMapper.createUser(doctorRecord);
         doctorMapper.createDoctor(doctorRecord);
         int id = doctorRecord.getId();

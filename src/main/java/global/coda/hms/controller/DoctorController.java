@@ -164,7 +164,7 @@ public class DoctorController {
      * @param doctorID  the doctor id
      * @return the int
      */
-    @PostMapping("/patientEntry/{doctorID}/{patientID}")
+    @GetMapping("/patientEntry/{doctorID}/{patientID}")
     public CustomResponse<Integer> patientDoctorMap(@PathVariable("patientID") int patientID, @PathVariable("doctorID") int doctorID) {
         CustomResponse<Integer> entryResponse = new CustomResponse<>();
         LOGGER.trace(patientID + " " + doctorID);

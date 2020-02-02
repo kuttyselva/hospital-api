@@ -104,10 +104,12 @@ public class PatientService {
      * @param patientId the patient id
      * @return the all doctors
      */
-    public List<DoctorRecord> getAllDoctors(int patientId) {
+    public PatientRecord getAllDoctors(int patientId) {
         LOGGER.trace(patientId);
-        List<DoctorRecord> doctorRecordList = patientMapper.getAllDoctors(patientId);
-        LOGGER.traceExit(doctorRecordList);
-        return doctorRecordList;
+        PatientRecord patientRecord = getPatient(patientId);
+        List<DoctorRecord> doctorList = patientMapper.getAllDoctors(patientId);
+        patientRecord.setDoctorRecordList(doctorList);
+        LOGGER.traceExit(patientRecord);
+        return patientRecord;
     }
 }
