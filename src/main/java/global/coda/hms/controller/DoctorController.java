@@ -139,12 +139,12 @@ public class DoctorController {
     }
 
 
-    /**
-     * Gets all doctors.
-     *
-     * @param doctorID the doctor id
-     * @return the all doctors
-     */
+//    /**
+//     * Gets all doctors.
+//     *
+//     * @param doctorID the doctor id
+//     * @return the all doctors
+//     */
 //    @GetMapping("/doctor/{id}/getPatients")
 //    public List<DoctorRecord> getAllDoctors(@PathVariable("id") int doctorID) {
 //        CustomResponse<List<DoctorRecord>> docResponse = new CustomResponse<>();
