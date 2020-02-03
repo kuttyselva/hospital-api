@@ -20,12 +20,12 @@ class DoctorControllerTest {
     @Autowired
     public DoctorController doctorController;
     public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(), MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
-    @Test
-    public void viewDoctorRecordTest() throws Exception {
-        this.mockMvc.perform(
-                get("/doctors/all"))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void viewDoctorRecordTest() throws Exception {
+//        this.mockMvc.perform(
+//                get("/doctors/all"))
+//                .andExpect(status().isOk());
+//    }
 //    @Test
 //    public void deleteDoctorRecordTest() throws Exception {
 //        this.mockMvc.perform(

@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc0e3b3-2747-4400-9631-cf036425e985" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/HmsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/HmsApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/PatientControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/PatientControllerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,17 +99,17 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="global.coda.hms.controller" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\VC\Desktop\hms\src\main\resources" />
+      <recent name="C:\Users\VC\Desktop\hms" />
+      <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="global.coda.hms.constants" />
       <recent name="global.coda.hms.model" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\VC\Desktop\hms\src\main\resources" />
-      <recent name="C:\Users\VC\Desktop\hms" />
-      <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="global.coda.hms.controller" />
     </key>
   </component>
   <component name="RunManager" selected="Gradle.HmsApplicationTests.contextLoads">
@@ -277,7 +277,7 @@
       <workItem from="1580183594512" duration="5884000" />
       <workItem from="1580271025303" duration="2314000" />
       <workItem from="1580658362103" duration="2495000" />
-      <workItem from="1580720678795" duration="285000" />
+      <workItem from="1580720678795" duration="847000" />
     </task>
     <servers />
   </component>

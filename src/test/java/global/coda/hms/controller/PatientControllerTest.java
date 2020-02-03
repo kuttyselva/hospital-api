@@ -27,12 +27,12 @@ public class PatientControllerTest {
     @Autowired
     public PatientController patientController;
     public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(), MediaType.APPLICATION_JSON.getSubtype(), StandardCharsets.UTF_8);
-    @Test
-    public void viewPatientRecordTest() throws Exception {
-        this.mockMvc.perform(
-                get("/patients/all"))
-                .andExpect(status().isOk());
-    }
+//    @Test
+//    public void viewPatientRecordTest() throws Exception {
+//        this.mockMvc.perform(
+//                get("/patients/all"))
+//                .andExpect(status().isOk());
+//    }
 //    @Test
 //    public void deletePatientRecordTest() throws Exception {
 //        this.mockMvc.perform(
