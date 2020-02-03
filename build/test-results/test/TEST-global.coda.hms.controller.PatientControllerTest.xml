@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="global.coda.hms.controller.PatientControllerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-02-03T16:46:06" hostname="DESKTOP-DN06960" time="0.303">
+  <properties/>
+  <testcase name="viewPatientRecordTest()" classname="global.coda.hms.controller.PatientControllerTest" time="0.303"/>
+  <system-out><![CDATA[2020-02-03
+			22:16:06.095  INFO 17060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Neither @ContextConfiguration nor @ContextHierarchy found for test class [global.coda.hms.controller.PatientControllerTest], using SpringBootContextLoader
+2020-02-03
+			22:16:06.095  INFO 17060 --- [    Test worker] o.s.t.c.s.AbstractContextLoader          : Could not detect default resource locations for test class [global.coda.hms.controller.PatientControllerTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+2020-02-03
+			22:16:06.095  INFO 17060 --- [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [global.coda.hms.controller.PatientControllerTest]: PatientControllerTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2020-02-03
+			22:16:06.095  INFO 17060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration global.coda.hms.HmsApplication for test class global.coda.hms.controller.PatientControllerTest
+2020-02-03
+			22:16:06.103  INFO 17060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+2020-02-03
+			22:16:06.108  INFO 17060 --- [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@5f6b6480, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@47ccff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@408ecaae, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@30b3106, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7400a83, org.springframework.test.context.transaction.TransactionalTestExecutionListener@395e0ea0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@f33789f, org.springframework.test.context.event.EventPublishingTestExecutionListener@556afb7e, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@52f9e742, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1b9bc8b3, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@ff8bcdf, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@dcb1755, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@10952259]
+null
+2020-02-03
+			22:16:06.117  WARN 17060 --- [    Test worker] g.c.h.c.JwtRequestFilter                 : JWT Token does not begin with Bearer String
+2020-02-03
+			22:16:06.128 TRACE 17060 --- [    Test worker] g.c.h.c.PatientController                : Enter
+2020-02-03
+			22:16:06.128 TRACE 17060 --- [    Test worker] g.c.h.s.DoctorService                    : Enter
+2020-02-03
+			22:16:06.132 DEBUG 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : ==>  Preparing: select t_user.pk_user_id as id, t_user.user_name as name , t_user.user_location as location, t_user.user_phone as phone, t_user.user_age as age ,t_patient.patient_disease as disease from t_user join t_patient on t_user.pk_user_id=t_patient.fk_user_id WHERE t_user.is_active = 1 
+2020-02-03
+			22:16:06.133 DEBUG 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : ==> Parameters: 
+2020-02-03
+			22:16:06.379 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==    Columns: id, name, location, phone, age, disease
+2020-02-03
+			22:16:06.379 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 3, selva, hole, 987654312, 20, cheese
+2020-02-03
+			22:16:06.381 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 5, dolphin, sea, 987654312, 20, fever
+2020-02-03
+			22:16:06.383 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 7, jellyfish, indian ocean, 987654312, 20, dental
+2020-02-03
+			22:16:06.384 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 10, java, doloaewr, 2345678998, 23, fever
+2020-02-03
+			22:16:06.386 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 11, popoye, Disney, 987654312, 20, vegan
+2020-02-03
+			22:16:06.387 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 19, lenovo, beach, 9876543123, 30, feverish
+2020-02-03
+			22:16:06.388 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 21, lepe, beach, 9876543123, 30, ENT
+2020-02-03
+			22:16:06.389 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 22, ADSSAD, adsf, 111, 111, dsfa
+2020-02-03
+			22:16:06.389 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 36, papa, madurai, 9876543210, 20, fever
+2020-02-03
+			22:16:06.392 TRACE 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==        Row: 37, vanmathi, kilpuk, 8229922992, 21, psycho
+2020-02-03
+			22:16:06.394 DEBUG 17060 --- [    Test worker] g.c.h.m.P.getPatients                    : <==      Total: 10
+2020-02-03
+			22:16:06.396 TRACE 17060 --- [    Test worker] g.c.h.s.DoctorService                    : Exit with([global.coda.hms.model.PatientRecord@3756fdea, global.coda.hms.model.PatientRecord@44814443, global.coda.hms.model.PatientRecord@21dd2aba, global.coda.hms.model.PatientRecord@1db4a148, global.coda.hms.model.PatientRecord@1d0da6b9, global.coda.hms.model.PatientRecord@53e04a07, global.coda.hms.model.PatientRecord@1b20223b, global.coda.hms.model.PatientRecord@23a66ef6, global.coda.hms.model.PatientRecord@536e2c55, global.coda.hms.model.PatientRecord@20fe44d])
+2020-02-03
+			22:16:06.397 TRACE 17060 --- [    Test worker] g.c.h.c.PatientController                : Exit with(global.coda.hms.model.CustomResponse@18a43fcd)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

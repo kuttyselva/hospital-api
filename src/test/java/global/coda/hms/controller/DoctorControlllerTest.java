@@ -1,10 +1,10 @@
 package global.coda.hms.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import java.nio.charset.Charset;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,12 +20,12 @@ class DoctorControllerTest {
     @Autowired
     public DoctorController doctorController;
     public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(), MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
-//    @Test
-//    public void viewDoctorRecordTest() throws Exception {
-//        this.mockMvc.perform(
-//                get("/doctors/all"))
-//                .andExpect(status().isOk());
-//    }
+    @Test
+    public void viewDoctorRecordTest() throws Exception {
+        this.mockMvc.perform(
+                get("/doctors/all"))
+                .andExpect(status().isOk());
+    }
 //    @Test
 //    public void deleteDoctorRecordTest() throws Exception {
 //        this.mockMvc.perform(

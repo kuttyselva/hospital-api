@@ -1,8 +1,7 @@
 package global.coda.hms.controller;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
+
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import java.nio.charset.StandardCharsets;
 
@@ -12,10 +11,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
-import com.fasterxml.jackson.databind.SerializationFeature;
-import global.coda.hms.model.PatientRecord;
+
 
 import org.junit.jupiter.api.*;
 
@@ -27,12 +23,12 @@ public class PatientControllerTest {
     @Autowired
     public PatientController patientController;
     public static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(), MediaType.APPLICATION_JSON.getSubtype(), StandardCharsets.UTF_8);
-//    @Test
-//    public void viewPatientRecordTest() throws Exception {
-//        this.mockMvc.perform(
-//                get("/patients/all"))
-//                .andExpect(status().isOk());
-//    }
+    @Test
+    public void viewPatientRecordTest() throws Exception {
+        this.mockMvc.perform(
+                get("/patients/all"))
+                .andExpect(status().isOk());
+    }
 //    @Test
 //    public void deletePatientRecordTest() throws Exception {
 //        this.mockMvc.perform(
