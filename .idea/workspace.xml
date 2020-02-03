@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bbc0e3b3-2747-4400-9631-cf036425e985" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/controller/DoctorControlllerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/global/coda/hms/HmsApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/global/coda/hms/HmsApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +54,12 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="hms" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="hms" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -104,7 +112,7 @@
       <recent name="C:\Users\VC\Desktop\hms\src\main\java\global\coda\hms\model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.DoctorControllerTest.viewDoctorRecordTest">
+  <component name="RunManager" selected="Gradle.HmsApplicationTests.contextLoads">
     <configuration name="DoctorControllerTest.viewDoctorRecordTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -131,6 +139,26 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" value="--tests &quot;global.coda.hms.HmsApplicationTests&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="HmsApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;global.coda.hms.HmsApplicationTests.contextLoads&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -185,25 +213,6 @@
       <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="hms [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="build" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="HmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hms.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="global.coda.hms.HmsApplication" />
@@ -213,11 +222,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.HmsApplicationTests.contextLoads" />
+        <item itemvalue="Gradle.HmsApplicationTests" />
         <item itemvalue="Gradle.DoctorControllerTest.viewDoctorRecordTest" />
         <item itemvalue="Gradle.PatientControllerTest.viewPatientRecordTest" />
         <item itemvalue="Gradle.PatientControllerTest" />
-        <item itemvalue="Gradle.HmsApplicationTests" />
-        <item itemvalue="Gradle.hms [build]" />
       </list>
     </recent_temporary>
   </component>
@@ -268,6 +277,7 @@
       <workItem from="1580183594512" duration="5884000" />
       <workItem from="1580271025303" duration="2314000" />
       <workItem from="1580658362103" duration="2495000" />
+      <workItem from="1580720678795" duration="285000" />
     </task>
     <servers />
   </component>
@@ -303,22 +313,22 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="570" y="103" key="FileChooserDialogImpl/0.0.1280.680@0.0.1280.680" timestamp="1579260371843" />
-    <state width="1237" height="-9" key="GridCell.Tab.0.bottom" timestamp="1580668947671">
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom" timestamp="1580720780335">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-9" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
-    <state width="1237" height="-9" key="GridCell.Tab.0.center" timestamp="1580668947671">
+    <state width="1237" height="151" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1580720780335" />
+    <state width="1237" height="151" key="GridCell.Tab.0.center" timestamp="1580720780334">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-9" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
-    <state width="1237" height="-9" key="GridCell.Tab.0.left" timestamp="1580668947670">
+    <state width="1237" height="151" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1580720780334" />
+    <state width="1237" height="151" key="GridCell.Tab.0.left" timestamp="1580720780334">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-9" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580668947670" />
-    <state width="1237" height="-9" key="GridCell.Tab.0.right" timestamp="1580668947671">
+    <state width="1237" height="151" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1580720780334" />
+    <state width="1237" height="151" key="GridCell.Tab.0.right" timestamp="1580720780335">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="-9" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580668947671" />
+    <state width="1237" height="151" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1580720780335" />
     <state width="1237" height="143" key="GridCell.Tab.1.bottom" timestamp="1580668617687">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -335,14 +345,14 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state width="1237" height="143" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1580668617687" />
-    <state x="142" y="0" key="SettingsEditor" timestamp="1580668379783">
+    <state x="142" y="0" key="SettingsEditor" timestamp="1580679914689">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580668379783" />
-    <state x="314" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1580658382654">
+    <state x="142" y="0" key="SettingsEditor/0.0.1280.680@0.0.1280.680" timestamp="1580679914689" />
+    <state x="314" y="166" key="com.intellij.ide.util.TipDialog" timestamp="1580720691393">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="314" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1580658382654" />
+    <state x="314" y="166" key="com.intellij.ide.util.TipDialog/0.0.1280.680@0.0.1280.680" timestamp="1580720691393" />
     <state x="449" y="254" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579516056753">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
